@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<CodeSnippets xmls="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
-    <CodeSnippet Format="1.0.0">
-    <Header>
-        <Title>Snipped to create Command, Response, Handler and Validator easyly ✨</Title>
-        <Shortcut>crhv</Shortcut>
-    </Header>
-    </CodeSnippet>
-</CodeSnippets>

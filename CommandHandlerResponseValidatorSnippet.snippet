@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmls="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>Snipped to create Command, Response, Handler and Validator easyly ✨</Title>
+            <Shortcut>crhv</Shortcut>
+            <Author>Aykhan Gadirov</Author>
+        </Header>
+        <Snipped>
+            <Declarations>
+                <Literal>
+                    <ID>commandName</ID>
+                    <ToolTip>Enter your command name</ToolTip>
+                    <Default>MyCommand</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="csharp">
+            <![CDATA[ 
+            public class $commandName$Command : IRequest<$commandName$Response>
+            {
+            }
+
+            public class $commandName$CommandHandler : IRequestHandler<$commandName$Command, $commandName$Response>
+            {
+            }
+
+            public class $commandName$Response
+            {
+            }
+            
+            public class $commandName$CommandValidator : AbstractValidator<$commandName$Command>
+            {
+                public $commandName$Validator()
+                {
+                }
+            }
+            ]]>
+            </Code>
+        </Snipped>
+    </CodeSnippet>
+</CodeSnippets>
