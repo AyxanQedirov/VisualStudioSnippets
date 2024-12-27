@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>Snipped to create Query, Response, Handler and Validator easyly ✨</Title>
+            <Shortcut>qrhv</Shortcut>
+            <Author>Aykhan Gadirov</Author>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>queryName</ID>
+                    <ToolTip>Enter your query name</ToolTip>
+                    <Default>MyQuery</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="csharp">
+            <![CDATA[ 
+            public class $queryName$Query : IRequest<$queryName$QueryResponse>
+            {
+            }
+
+            public class $queryName$QueryHandler : IRequestHandler<$queryName$Query, $queryName$QueryResponse>
+            {
+                public Task<$queryName$QueryResponse> Handle($queryName$Query request, CancellationToken cancellationToken)
+                {
+                    throw new NotImplementedException();
+                }
+            }
+
+            public class $queryName$QueryResponse
+            {
+            }
+            
+            public class $queryName$QueryValidator : AbstractValidator<$queryName$Query>
+            {
+                public $queryName$QueryValidator()
+                {
+                }
+            }
+            ]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>
